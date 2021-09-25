@@ -1,6 +1,6 @@
 hours = input("Enter the hours: ")
 hours = float(hours)
-rate = input("Enter rate: ")
+rate = input("Enter the rate: ")
 rate = float(rate)
 pay = str(hours * rate)
 print("your pay is: " + pay)
