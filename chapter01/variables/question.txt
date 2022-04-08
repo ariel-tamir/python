@@ -1,0 +1,10 @@
+write a program that uses the following types of variables:
+
+- string
+- integer
+- float
+- boolean
+
+
+For each type, create 2 variables, and print them.
+
