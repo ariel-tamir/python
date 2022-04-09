@@ -1,0 +1,7 @@
+write a program that gets 2 numbers from the user, and returns the sum of the numbers
+for example:
+
+Enter the first number: 45
+Enter the second number: 11
+The result of 45+11 is 56
+

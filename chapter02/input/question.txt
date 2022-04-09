@@ -1,0 +1,2 @@
+write a program that gets a name input from the user.
+the program will print Hello to the name that we got.

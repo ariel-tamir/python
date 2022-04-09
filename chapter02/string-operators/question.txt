@@ -1,0 +1,9 @@
+write a program that gets 2 numbers A,B and a string from the user.
+The program will print the string from location A B times.
+for example:
+
+Enter the string: Hello Dog!
+Enter the location: 6
+Enter the times: 3
+
+The result is: Dog!Dog!Dog!
