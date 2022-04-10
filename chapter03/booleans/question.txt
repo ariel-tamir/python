@@ -1,0 +1,9 @@
+write a program that asks the user if he likes pasta.
+Then ask the user if he likes broccoli.
+The answer to the questions should be true or false
+
+
+if he likes both, print Yucky
+if he likes only pasta, print Yammy
+if he likes only broccoli, print Yammy
+if he does not like any, print hungry

@@ -1,0 +1,7 @@
+write a program that gets the amount of water glasses that the person had drank.
+If the amount is high (8 or more) print "Well done".
+If the amount is between 4 and 7, print "You can do better".
+Otherwise, print "OMG!! go to drink now!"
+
+In case of non integer value, print please enter an integer
+
