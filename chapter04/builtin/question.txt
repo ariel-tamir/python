@@ -1,0 +1,2 @@
+get 3 numbers from the user
+print the highest number, and the lowest number

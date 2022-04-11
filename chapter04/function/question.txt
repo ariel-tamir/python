@@ -1,0 +1,7 @@
+get 3 numbers from the user: low,high,bet
+random a number between low and high
+if the random number equals to bet: print You win!!
+Otherwise, print You lose!
+
+
+Do this 10 times, and then print the total amount of winnings

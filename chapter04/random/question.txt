@@ -1,0 +1,1 @@
+get a sentence from the user, and print one random word from it
