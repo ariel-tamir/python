@@ -1,0 +1,8 @@
+get a number from the user and print a triangle according to the number.
+For example, if the user has entered 4, print:
+1
+12
+123
+1234
+
+

@@ -1,0 +1,3 @@
+get a number from the user and print asteriks according to the number.
+For example, if the user has entered 7, print:
+*******

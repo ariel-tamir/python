@@ -1,0 +1,7 @@
+get a number from the user and print asteriks square according to the number.
+For example, if the user has entered 3, print:
+***
+***
+***
+
+
