@@ -1,0 +1,19 @@
+create a game.
+your program generates a random word.
+The player tries to guess the word, and the program provides hints.
+
+For example:
+(This is not printed, the program generated the word az)
+
+Enter your guess: bla
+Wrong, your guess is too high
+
+Enter your guess: aaaab
+Wrong, your guess is too low
+
+Enter your guess: app
+Wrong, your guess is too low
+
+Enter your guess: az
+Correct!!! You Win!!!
+

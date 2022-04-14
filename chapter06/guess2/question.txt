@@ -1,0 +1,30 @@
+create a game.
+your program generates a random word.
+The player tries to guess the word, and the program provides hints.
+
+
+For next time:
+1. If the guess is the prefix of the word, give hint.
+2. Print how many guess
+
+
+For example:
+(This is not printed, the program generated the word az)
+
+Enter your guess: bla
+Wrong, your guess is too high
+
+Enter your guess: a
+Wrong, your guess is too low
+This is a good prefix!
+
+Enter your guess: aaaab
+Wrong, your guess is too low
+
+Enter your guess: app
+Wrong, your guess is too low
+
+Enter your guess: az
+Correct!!! You Win!!!
+Total of 5 guesses.
+

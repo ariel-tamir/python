@@ -1,0 +1,6 @@
+get a sentence from the user and print the number of a,b,c in the sentence.
+for example:
+Enter your sentence: Good day I will see you tomorrow co co co.
+a amount: 1
+b amount: 0
+c amount: 3
