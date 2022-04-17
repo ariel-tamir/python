@@ -1,0 +1,2 @@
+read from a file input.txt
+print all the lines that contain "Mirabel"

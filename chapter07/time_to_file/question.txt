@@ -1,0 +1,8 @@
+get a file name from the user
+print the current time to the file.
+for example:
+
+Enter the file name: mytime
+
+mytime.txt will have the following data:
+2022-01-25 16:25:00

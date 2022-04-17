@@ -1,0 +1,33 @@
+you need to manage players ages
+when the program starts, ask for a player name.
+Then ask for the player age.
+then save the player age to a file named by the player name.
+Then print the average age of all player.
+
+For example:
+
+* First time run:
+
+```
+Enter player name: Moana
+Enter player age: 17
+Average age is 17
+```
+
+Files are:
+Moana.txt with data 17
+
+
+* Second time run:
+
+```
+Enter player name: Maui
+Enter player age: 383
+Average age is 200
+```
+
+Files are:
+Moana.txt with data 17
+Maui.txt with data 383
+
+
