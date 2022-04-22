@@ -1,0 +1,2 @@
+get numbers from the user until the user types done.
+print the maximum, the minimum, and the average.

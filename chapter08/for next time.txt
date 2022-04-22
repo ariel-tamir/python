@@ -1,8 +1,0 @@
-**
-read words from file, and print unique words
-
-
-**
-get list of numbers
-print min, max, average
-
