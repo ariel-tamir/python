@@ -1,0 +1,7 @@
+read words from an input.txt file
+print the list of unique words and the appearances count for each.
+for example:
+
+hello 1
+alon 3
+mister 2

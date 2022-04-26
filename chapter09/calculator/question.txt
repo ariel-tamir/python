@@ -1,0 +1,21 @@
+Read commands from file input.txt.
+The commands update the count of words.
+The possible commands are:
+ADD <word>
+REMOVE <word>
+
+And print the count of each word, whose count is bigger than zero.
+The list printed should be sorted alphabetically.
+For example:
+
+ADD aa
+ADD bb
+ADD aa
+ADD cc
+REMOVE cc
+ADD bb
+REMOVE aa
+
+output:
+aa 1
+bb 2
