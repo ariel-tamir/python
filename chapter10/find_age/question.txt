@@ -1,0 +1,15 @@
+read names and ages from file disney.txt
+save the names in dictionary, where the key of the dictionary is the name, and the value of the dictionary is the age.
+then ask the user for name, and print the age.
+for example, the dictionary will have the entries:
+
+Key: tuple (Mirabel,Madrigal)
+Value: 15
+...
+
+Then ask:
+Enter name:  Mirabel Madrigal
+The age is 15.
+
+
+

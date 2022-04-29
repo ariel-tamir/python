@@ -1,0 +1,2 @@
+A. create a function that gets a list, and removes the second element in the list
+B. create a function that gets a tuple, and removes the second element in the tuple
