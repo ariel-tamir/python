@@ -1,0 +1,2 @@
+- print all emails from input.txt
+- print average of all X-DSPAM-Confidence

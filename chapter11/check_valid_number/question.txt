@@ -1,0 +1,7 @@
+get a number from the user and check if it is valid.
+The number can be an integer, and can be a float.
+For example:
+327
+125432.3432
+0.321
+122
