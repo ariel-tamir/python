@@ -1,0 +1,16 @@
+Write a program to prompt the user for hours and rate per hour to compute gross pay.
+Give the employee 1.5 times the hourly rate for hours worked above 40 hours.
+Handle non-numeric input gracefully by printing a message and exiting the program.
+
+Examples:
+
+Enter Hours: 45
+Enter Rate: 10
+Pay: 475.0
+
+Enter Hours: 20
+Enter Rate: nine
+Error, please enter numeric input
+
+Enter Hours: forty
+Error, please enter numeric input
