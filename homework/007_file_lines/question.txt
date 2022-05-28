@@ -1,0 +1,24 @@
+Create a program that asks the user for a file name.
+Read the lines of the file.
+If the line contains a number, the program prints the line.
+After reading all the lines, print the amount of lines with numbers, the amount of lines without numbers, and the total amount of lines.
+For example:
+
+If we have file input.txt with the following content:
+
+I ate 3 bananas.
+But then I saw bruno.
+He told me he can see my future.
+He was holding 1 crystal ball.
+I saw his vision.
+In the vision I ate 3 bananas, and my stomach ached.
+The end!
+
+
+Enter file name: input.txt
+
+I ate 3 bananas.
+He was holding 1 crystal ball.
+In the vision I ate 3 bananas, and my stomach ached.
+
+The file has 7 lines, 3 of them with numbers, and 4 without numbers.
