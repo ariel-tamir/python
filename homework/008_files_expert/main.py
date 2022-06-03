@@ -1,6 +1,7 @@
-def main():
+file_name = input("Enter file name: ")
+
+def missing_dot():
     line_number = 0
-    file_name = input("Enter file name: ")
     if file_name.endswith(".txt"):
         with open(file_name, "r") as user_file:
             print("The lines with missing dot at the end are: ")
@@ -11,8 +12,9 @@ def main():
                     pass
                 else:
                     print("Line {}: ".format(line_number), line)
-    else:
 
 
+def average():
 
-main()
+
+missing_dot()
