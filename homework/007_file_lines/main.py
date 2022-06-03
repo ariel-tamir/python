@@ -7,7 +7,7 @@ def main():
     file_name = input("Enter file name: ")
     with open(file_name, "r") as user_file:
         for line in user_file:
-            numbers_in_line = re.findall(r"\d+", line)
+            numbers_in_line = re.findall(r"\d", line)
             if len(numbers_in_line) >= 1:
                 print(line)
                 count_numbers = count_numbers + 1
