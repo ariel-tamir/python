@@ -31,3 +31,4 @@ Line 2: 2015.75
 Line 3: 2020
 Line 4: 2005.75
 The average of all the averages is: 2007.075
+j
