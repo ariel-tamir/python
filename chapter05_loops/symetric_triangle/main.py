@@ -9,7 +9,7 @@ def print_row(row, number):
 
 
 def main():
-    number = input("enter number: ")
+    number = input("Enter number: ")
     number = int(number)
     for row in range(number):
         print_row(row, number)
