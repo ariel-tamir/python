@@ -9,7 +9,27 @@ def board(x_row, x_col):
 
 
 def main():
-    board(2, 3)
+    x_row = 0
+    x_col = 0
+    board(x_row, x_col)
+    move_x = input("Enter your move: ")
+    while move_x != "quit":
+        move_x = input("Enter your move: ")
+        if move_x == "up":
+            x_row = x_row - 1
+            board(x_row, x_col)
+        elif move_x == "down":
+            x_row = x_row + 1
+            board(x_row, x_col)
+        elif move_x == "right":
+            x_col = x_col + 1
+            board(x_row, x_col)
+        elif move_x == "left":
+            x_col = x_col - 1
+            board(x_row, x_col)
+        else:
+            print("Error")
+            quit()
 
 
 main()
