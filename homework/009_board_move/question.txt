@@ -49,4 +49,3 @@ OXOO
 Enter your move: quit
 Bye bye, have a nice day.
 
-שורה ועמודה
