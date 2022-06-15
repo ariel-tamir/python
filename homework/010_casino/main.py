@@ -17,14 +17,21 @@ def balances(balance):
 
 def play(balance):
     print()
-    user_name = input("Enter your name: ")
+    while True:
+        user_name = input("Enter your name: ")
+        if user_name in balance:
+            break
+        else:
+            print("Error!")
     user_bet = input("How much money do you want to bet on? ")
     dice_result = random.randint(1, 6)
     print("Rolling the dice…… The dice shows {}.".format(dice_result))
     if 1 <= dice_result <= 3:
-        print("the bet is lost")
+        print("The bet is lost")
     elif 4 <= dice_result <= 5:
-        print("no profit")
+        print("No profit")
+    elif dice_result == 6:
+        print("You won!!")
 
 
 def print_menu():
