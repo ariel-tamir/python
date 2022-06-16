@@ -23,15 +23,24 @@ def play(balance):
             break
         else:
             print("Error!")
-    user_bet = input("How much money do you want to bet on? ")
+    while True:
+        user_bet = input("How much money do you want to bet on? ")
+        user_bet = int(user_bet)
+        if user_bet > balance[user_name]:
+            print("Error!")
+        else:
+            break
     dice_result = random.randint(1, 6)
     print("Rolling the dice…… The dice shows {}.".format(dice_result))
     if 1 <= dice_result <= 3:
+        balance[user_name] = balance[user_name] - user_bet
         print("The bet is lost")
     elif 4 <= dice_result <= 5:
         print("No profit")
     elif dice_result == 6:
-        print("You won!!")
+        balance[user_name] = balance[user_name] + (3 * user_bet)
+        money = 3 * user_bet
+        print("You won {}$!!".format(money))
 
 
 def print_menu():
