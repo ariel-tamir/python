@@ -2,19 +2,19 @@ Create a game that plays a queen on a chess board.
 When starting the game, show the chess board:
 
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOOOOOOO
-5 OOOOOOOO
-4 OOOOOOOO
-3 OOOOOOOO
-2 OOOOOOOO
-1 XOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 ♕🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 
-The queen is marked as X.
-Empty squares are marked as O.
+The queen is marked as ♕.
+Empty squares are marked as 🨇.
 Ask the user for the queen target destination.
 The destination is compound of a letter (A-H) and a number (1-8),
 Show error if it is invalid.
@@ -30,77 +30,77 @@ Enter the queen target destination: kuku
 Error: kuku is not a valid board location.
 Enter the queen target destination: A4
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOOOOOOO
-5 OOOOOOOO
-4 OOOOOOOO
-3 OOOOOOOO
-2 XOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 ♕🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 The queen is still moving…
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOOOOOOO
-5 OOOOOOOO
-4 OOOOOOOO
-3 XOOOOOOO
-2 OOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 ♕🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 The queen is still moving…
 
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOOOOOOO
-5 OOOOOOOO
-4 XOOOOOOO
-3 OOOOOOOO
-2 OOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 ♕🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 The queen rests.
 
 Enter the queen target destination: D7
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOOOOOOO
-5 OXOOOOOO
-4 OOOOOOOO
-3 OOOOOOOO
-2 OOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇♕🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 The queen is still moving…
 
-8 OOOOOOOO
-7 OOOOOOOO
-6 OOXOOOOO
-5 OOOOOOOO
-4 OOOOOOOO
-3 OOOOOOOO
-2 OOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇🨇🨇🨇🨇🨇
+6 🨇🨇♕🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 The queen is still moving…
 
-8 OOOOOOOO
-7 OOOXOOOO
-6 OOOOOOOO
-5 OOOOOOOO
-4 OOOOOOOO
-3 OOOOOOOO
-2 OOOOOOOO
-1 OOOOOOOO
+8 🨇🨇🨇🨇🨇🨇🨇🨇
+7 🨇🨇🨇♕🨇🨇🨇🨇
+6 🨇🨇🨇🨇🨇🨇🨇🨇
+5 🨇🨇🨇🨇🨇🨇🨇🨇
+4 🨇🨇🨇🨇🨇🨇🨇🨇
+3 🨇🨇🨇🨇🨇🨇🨇🨇
+2 🨇🨇🨇🨇🨇🨇🨇🨇
+1 🨇🨇🨇🨇🨇🨇🨇🨇
    ABCDEFGH
 
 Enter the queen target destination: quit
