@@ -44,16 +44,25 @@ def target_number(queen_target):
 
 
 def main():
-    x_row = 7
-    x_col = 0
-    board(x_row, x_col)
+    queen_row = 7
+    queen_col = 0
+    board(queen_row, queen_col)
     print()
     queen_target = input("Enter the queen target destination: ")
-    row, col = target_number(queen_target)
-    if row != x_row:
-        print("Error: {} is not a valid move.".format(queen_target))
-    else:
-        board(row, col)
+    while queen_target != "quit":
+        target_row, target_col = target_number(queen_target)
+        if target_row != queen_row:
+            print("Error: {} is not a valid move.".format(queen_target))
+            queen_target = input("Enter the queen target destination: ")
+        else:
+            while queen_col <= target_col:
+                board(queen_row, queen_col)
+                print()
+                queen_col = queen_col + 1
+            print()
+            queen_target = input("Enter the queen target destination: ")
+    print("Okay, bye bye")
 
 
 main()
+
