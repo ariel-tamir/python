@@ -35,9 +35,11 @@ def get_col(letter):
 
 
 def get_row(number):
-    number = int(number)
-    number = 8 - number
-    return number
+    if number == int(number):
+        number = 8 - number
+        return number
+    else:
+        return None
 
 
 def target_number(queen_target):
