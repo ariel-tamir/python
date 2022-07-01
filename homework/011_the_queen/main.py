@@ -2,7 +2,6 @@ import time
 import re
 
 
-
 def board(x_row, x_col):
     for row in range(8):
         print(8 - row, " ", end="")
@@ -35,11 +34,9 @@ def get_col(letter):
 
 
 def get_row(number):
-    if number == int(number):
-        number = 8 - number
-        return number
-    else:
-        return None
+    number = int(number)
+    number = 8 - number
+    return number
 
 
 def target_number(queen_target):
@@ -50,11 +47,11 @@ def target_number(queen_target):
     return row, col
 
 
-def get_new_location_and_validity():
+def get_new_location_and_validity(queen_row, queen_col):
     while True:
         queen_target = input("Enter the queen target destination: ")
         if queen_target == "quit":
-            return None
+            return None, None
         if len(queen_target) != 2:
             print("{} is not a valid board location".format(queen_target))
             continue
@@ -63,11 +60,26 @@ def get_new_location_and_validity():
             print("{} is not a valid board location".format(queen_target))
             continue
         target_row, target_col = target_number(queen_target)
+        if target_row != queen_row:
+            print("Error: {} is not a valid move.".format(queen_target))
+            continue
+        if queen_col > target_col:
+            print("Error: {} is not a valid direction.".format(queen_target))
+            continue
         return target_row, target_col
-        # if not validation input2():
-        #   continue
-        # validation input3
-        #   continue
+
+
+def move_right(queen_col, target_col, queen_row):
+    while queen_col <= target_col:
+        print()
+        print("The queen is still moving…")
+        board(queen_row, queen_col)
+        time.sleep(1)
+        print()
+        queen_col = queen_col + 1
+        print()
+        print("The queen rests.")
+    return queen_col
 
 
 def main():
@@ -75,27 +87,17 @@ def main():
     queen_col = 0
     board(queen_row, queen_col)
     print()
-    queen_target = input("Enter the queen target destination: ")
-    # queen_row,col = get_new_location_and_validity()
-    # while row is not None
-    while queen_target != "quit":
-        target_row, target_col = target_number(queen_target)
-        if target_row != queen_row:
-            print("Error: {} is not a valid move.".format(queen_target))
-            queen_target = input("Enter the queen target destination: ")
-        else:
-            while queen_col <= target_col:
-                print()
-                print("The queen is still moving…")
-                board(queen_row, queen_col)
-                time.sleep(1)
-                print()
-                queen_col = queen_col + 1
-            print()
-            print("The queen rests.")
-            print()
-            queen_target = input("Enter the queen target destination: ")
-    print("Okay, bye bye")
+    # TODO: handle also move left
+    # 1. in get_new_location_and_validity - allow also left
+    # 2. in the loop check if moving left or right using queen_col, target_col
+    #    if queen_col > target_col --> move_right
+    #    if queen_col < target_col --> move_left
 
+    target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
+    while target_row is not None:
+        queen_col = move_right(queen_col, target_col, queen_row)
+        print()
+        target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
+    print("Okay, bye bye")
 
 main()
