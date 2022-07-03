@@ -60,9 +60,6 @@ def get_new_location_and_validity(queen_row, queen_col):
             print("{} is not a valid board location".format(queen_target))
             continue
         target_row, target_col = target_number(queen_target)
-        if target_row != queen_row:
-            print("Error: {} is not a valid move.".format(queen_target))
-            continue
         return target_row, target_col
 
 
@@ -74,8 +71,8 @@ def move_right(queen_col, target_col, queen_row):
         time.sleep(1)
         print()
         queen_col = queen_col + 1
-        print()
-        print("The queen rests.")
+    print()
+    print("The queen rests.")
     return queen_col
 
 
@@ -87,9 +84,35 @@ def move_left(queen_col, target_col, queen_row):
         time.sleep(1)
         print()
         queen_col = queen_col - 1
-        print()
-        print("The queen rests.")
+    print()
+    print("The queen rests.")
     return queen_col
+
+
+def move_up(queen_row, target_row, queen_col):
+    while queen_row >= target_row:
+        print()
+        print("The queen is still moving…")
+        board(queen_row, queen_col)
+        time.sleep(1)
+        print()
+        queen_row = queen_row - 1
+    print()
+    print("The queen rests.")
+    return queen_row
+
+
+def move_down(queen_row, target_row, queen_col):
+    while queen_row <= target_row:
+        print()
+        print("The queen is still moving…")
+        board(queen_row, queen_col)
+        time.sleep(1)
+        print()
+        queen_row = queen_row + 1
+    print()
+    print("The queen rests.")
+    return queen_row
 
 
 def main():
@@ -111,6 +134,14 @@ def main():
             target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
         elif queen_col > target_col:
             queen_col = move_left(queen_col, target_col, queen_row)
+            print()
+            target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
+        elif queen_row > target_row:
+            queen_row = move_up(queen_row, target_row, queen_col)
+            print()
+            target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
+        elif queen_row < target_row:
+            queen_row = move_down(queen_row, target_row, queen_col)
             print()
             target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
     print("Okay, bye bye")
