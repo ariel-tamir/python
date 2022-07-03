@@ -60,56 +60,63 @@ def get_new_location_and_validity(queen_row, queen_col):
             print("{} is not a valid board location".format(queen_target))
             continue
         target_row, target_col = target_number(queen_target)
+        if queen_row != target_row and queen_col != target_col:
+            print("{} is not a valid board location".format(queen_target))
+            continue
         return target_row, target_col
 
 
 def move_right(queen_col, target_col, queen_row):
-    while queen_col <= target_col:
+    while queen_col < target_col:
         print()
         print("The queen is still moving…")
         board(queen_row, queen_col)
         time.sleep(1)
         print()
         queen_col = queen_col + 1
+    board(queen_row, queen_col)
     print()
     print("The queen rests.")
     return queen_col
 
 
 def move_left(queen_col, target_col, queen_row):
-    while queen_col >= target_col:
+    while queen_col > target_col:
         print()
         print("The queen is still moving…")
         board(queen_row, queen_col)
         time.sleep(1)
         print()
         queen_col = queen_col - 1
+    board(queen_row, queen_col)
     print()
     print("The queen rests.")
     return queen_col
 
 
 def move_up(queen_row, target_row, queen_col):
-    while queen_row >= target_row:
+    while queen_row > target_row:
         print()
         print("The queen is still moving…")
         board(queen_row, queen_col)
         time.sleep(1)
         print()
         queen_row = queen_row - 1
+    board(queen_row, queen_col)
     print()
     print("The queen rests.")
     return queen_row
 
 
 def move_down(queen_row, target_row, queen_col):
-    while queen_row <= target_row:
+    while queen_row < target_row:
         print()
         print("The queen is still moving…")
         board(queen_row, queen_col)
         time.sleep(1)
         print()
         queen_row = queen_row + 1
+    board(queen_row, queen_col)
     print()
     print("The queen rests.")
     return queen_row
@@ -120,12 +127,6 @@ def main():
     queen_col = 0
     board(queen_row, queen_col)
     print()
-    # TODO: handle also move left
-    # 1. in get_new_location_and_validity - allow also left
-    # 2. in the loop check if moving left or right using queen_col, target_col
-    #    if queen_col > target_col --> move_right
-    #    if queen_col < target_col --> move_left
-
     target_row, target_col = get_new_location_and_validity(queen_row, queen_col)
     while target_row is not None:
         if queen_col < target_col:

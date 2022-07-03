@@ -106,3 +106,10 @@ The queen is still moving…
 Enter the queen target destination: quit
 
 Okay, bye bye
+
+
+ # TODO: handle also move left
+    # 1. in get_new_location_and_validity - allow also left
+    # 2. in the loop check if moving left or right using queen_col, target_col
+    #    if queen_col > target_col --> move_right
+    #    if queen_col < target_col --> move_left
