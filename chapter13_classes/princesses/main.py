@@ -1,5 +1,5 @@
-from chapter13_ood.princesses.big_princess import BigPrincess
-from chapter13_ood.princesses.princess import Princess
+from chapter13_classes.princesses.big_princess import BigPrincess
+from chapter13_classes.princesses.princess import Princess
 
 
 def main():

@@ -1,4 +1,4 @@
-from chapter13_ood.princesses.princess import Princess
+from chapter13_classes.princesses.princess import Princess
 
 
 class BigPrincess(Princess):
