@@ -1,8 +1,9 @@
 from class_actor import Actor
 
 
-def list_actors_by_age(actor_name):
-    actor_name.is_in_age_range()
+def list_actors_by_age(actors_list):
+    for actor in actors_list:
+        print(actor)
 
 
 def add_actor(actors_list):
@@ -19,30 +20,40 @@ def add_actor(actors_list):
 
 
 def delete_actor():
+    print()
 
 
 def delete_movie():
+    pass
 
 
-def main():
+def print_menu():
+    print()
     print("1. List actors by age")
     print("2. Add actor")
     print("3. Delete actor")
     print("4. Delete movie")
     print("5. Quit")
     print()
+
+
+def main():
+    print_menu()
     actors_list = []
     user_selection = input("Enter your selection: ")
     user_selection = int(user_selection)
     while user_selection != 5:
         if user_selection == 1:
-            list_actors_by_age()
+            list_actors_by_age(actors_list)
         elif user_selection == 2:
-            add_actor()
+            add_actor(actors_list)
         elif user_selection == 3:
             delete_actor()
         elif user_selection == 4:
             delete_movie()
+        print_menu()
+        user_selection = input("Enter your selection: ")
+        user_selection = int(user_selection)
 
 
 main()
