@@ -31,8 +31,10 @@ def add_actor(actors_list):
     print("OK, actor {} added, and {} movies specified.".format(actor_name, movie_count))
 
 
-def delete_actor():
+def delete_actor(actors_list):
     actor_delete = input("Enter actor name: ")
+    actors_list.remove(actor_delete)
+    print("OK, the actor {} was deleted.".format(actor_delete))
 
 
 def delete_movie():
