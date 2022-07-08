@@ -19,21 +19,24 @@ def add_actor(actors_list):
             actor_birth_year = input("Enter the actor’s birth year: ")
         break
     actor_movies = []
+    movie_count = 0
     actor_movie = input("Enter the actor’s movies, or click Enter to complete: ")
     actor_movies.append(actor_movie)
     while actor_movie != '':
         actor_movie = input("Enter the actor’s movies, or click Enter to complete: ")
         actor_movies.append(actor_movie)
+        movie_count = movie_count + 1
     actor = Actor(actor_name, actor_birth_year, actor_movies)
     actors_list.append(actor)
+    print("OK, actor {} added, and {} movies specified.".format(actor_name, movie_count))
 
 
 def delete_actor():
-    print()
+    actor_delete = input("Enter actor name: ")
 
 
 def delete_movie():
-    pass
+    movie_delete = input("Enter movie name: ")
 
 
 def print_menu():
@@ -63,6 +66,7 @@ def main():
         print_menu()
         user_selection = input("Enter your selection: ")
         user_selection = int(user_selection)
+    print("OK, have a good one!")
 
 
 main()
