@@ -1,14 +1,23 @@
 from class_actor import Actor
+import re
 
 
 def list_actors_by_age(actors_list):
+    age_range = input("Enter actors age range: ")
+    print("Matching actors are: ")
     for actor in actors_list:
-        print(actor)
+        actor.is_in_age_range(from_age, to_age)
 
 
 def add_actor(actors_list):
     actor_name = input("Enter the actor’s name: ")
     actor_birth_year = input("Enter the actor’s birth year: ")
+    validation_input = re.findall(r"\d+", actor_birth_year)
+    while True:
+        if len(validation_input) == 0:
+            print("{} is not a valid input".format(actor_birth_year))
+            actor_birth_year = input("Enter the actor’s birth year: ")
+        break
     actor_movies = []
     actor_movie = input("Enter the actor’s movies, or click Enter to complete: ")
     actor_movies.append(actor_movie)
