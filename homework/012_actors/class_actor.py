@@ -5,6 +5,7 @@ class Actor:
         self.movies = movies
 
     def is_in_age_range(self, from_age, to_age):
+        self.birth_year = int(self.birth_year)
         self.birth_year = 2022 - self.birth_year
         if from_age <= self.birth_year <= to_age:
             return True

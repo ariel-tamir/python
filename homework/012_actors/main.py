@@ -1,12 +1,19 @@
-from class_actor import Actor
 import re
+
+from class_actor import Actor
 
 
 def list_actors_by_age(actors_list):
     age_range = input("Enter actors age range: ")
+    parts = age_range.split(sep="-")
+    from_age = parts[0]
+    from_age = int(from_age)
+    to_age = parts[1]
+    to_age = int(to_age)
     print("Matching actors are: ")
     for actor in actors_list:
-        actor.is_in_age_range(from_age, to_age)
+        if actor.is_in_age_range(from_age, to_age):
+            print(actor)
 
 
 def add_actor(actors_list):
@@ -17,7 +24,9 @@ def add_actor(actors_list):
         if len(validation_input) == 0:
             print("{} is not a valid input".format(actor_birth_year))
             actor_birth_year = input("Enter the actor’s birth year: ")
-        break
+            validation_input = re.findall(r"\d+", actor_birth_year)
+        else:
+            break
     actor_movies = []
     movie_count = 0
     actor_movie = input("Enter the actor’s movies, or click Enter to complete: ")
@@ -62,7 +71,7 @@ def main():
         elif user_selection == 2:
             add_actor(actors_list)
         elif user_selection == 3:
-            delete_actor()
+            delete_actor(actors_list)
         elif user_selection == 4:
             delete_movie()
         print_menu()
