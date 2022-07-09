@@ -13,7 +13,7 @@ def list_actors_by_age(actors_list):
     print("Matching actors are: ")
     for actor in actors_list:
         if actor.is_in_age_range(from_age, to_age):
-            print(actor)
+            print(actor.name, "({} movies)".format(len(actor.movies)-1))
 
 
 def add_actor(actors_list):
