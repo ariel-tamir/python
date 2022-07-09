@@ -13,7 +13,7 @@ def list_actors_by_age(actors_list):
     print("Matching actors are: ")
     for actor in actors_list:
         if actor.is_in_age_range(from_age, to_age):
-            print(actor.name, "({} movies)".format(len(actor.movies)-1))
+            print(actor.name, "({} movies)".format(len(actor.movies) - 1))
 
 
 def add_actor(actors_list):
@@ -41,9 +41,22 @@ def add_actor(actors_list):
 
 
 def delete_actor(actors_list):
-    actor_delete = input("Enter actor name: ")
-    actors_list.remove(actor_delete)
-    print("OK, the actor {} was deleted.".format(actor_delete))
+    # l = ['a', 'b', 'c']
+    # print(l)
+    #
+    # for index, address in enumerate(l):
+    #     print(index, address)
+    #     if address == 'b':
+    #         l.pop(index)
+    # print(l)
+
+    actor_name = input("Enter actor name: ")
+    for index, actor in enumerate(actors_list):
+        if actor.name == actor_name:
+            actors_list.pop(index)
+            print("OK, the actor {} was deleted.".format(actor_name))
+            return
+    print("actor not found")
 
 
 def delete_movie():
