@@ -1,6 +1,5 @@
 import re
 
-from actor import Actor
 from actors import Actors
 
 
