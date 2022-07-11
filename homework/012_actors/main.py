@@ -5,6 +5,14 @@ from class_actor import Actor
 
 def list_actors_by_age(actors_list):
     age_range = input("Enter actors age range: ")
+    validation_input = re.findall(r"^\d+-\d+$", age_range)
+    while True:
+        if len(validation_input) == 0:
+            print("{} is not a valid input".format(age_range))
+            age_range = input("Enter actors age range: ")
+            validation_input = re.findall(r"^\d+-\d+$", age_range)
+        else:
+            break
     parts = age_range.split(sep="-")
     from_age = parts[0]
     from_age = int(from_age)
@@ -19,12 +27,12 @@ def list_actors_by_age(actors_list):
 def add_actor(actors_list):
     actor_name = input("Enter the actor’s name: ")
     actor_birth_year = input("Enter the actor’s birth year: ")
-    validation_input = re.findall(r"\d+", actor_birth_year)
+    validation_input = re.findall(r"^\d+$", actor_birth_year)
     while True:
         if len(validation_input) == 0:
             print("{} is not a valid input".format(actor_birth_year))
             actor_birth_year = input("Enter the actor’s birth year: ")
-            validation_input = re.findall(r"\d+", actor_birth_year)
+            validation_input = re.findall(r"^\d+$", actor_birth_year)
         else:
             break
     actor_movies = []
@@ -41,16 +49,11 @@ def add_actor(actors_list):
 
 
 def delete_actor(actors_list):
-    # l = ['a', 'b', 'c']
-    # print(l)
-    #
-    # for index, address in enumerate(l):
-    #     print(index, address)
-    #     if address == 'b':
-    #         l.pop(index)
-    # print(l)
-
     actor_name = input("Enter actor name: ")
+    delete_actor_by_name(actors_list, actor_name)
+
+
+def delete_actor_by_name(actors_list, actor_name):
     for index, actor in enumerate(actors_list):
         if actor.name == actor_name:
             actors_list.pop(index)
@@ -59,8 +62,14 @@ def delete_actor(actors_list):
     print("actor not found")
 
 
-def delete_movie():
-    movie_delete = input("Enter movie name: ")
+def delete_movie(actors_list):
+    actors_to_delete = []
+    actor_movie = input("Enter movie name: ")
+    for actor in actors_list:
+        if actor_movie in actor.movies:
+            actors_to_delete.append(actor.name)
+    for delete in actors_to_delete:
+        delete_actor_by_name(actors_list, delete)
 
 
 def print_menu():
@@ -73,11 +82,23 @@ def print_menu():
     print()
 
 
+def valid_input_user_selection():
+    user_selection = input("Enter your selection: ")
+    validation_input = re.findall(r"^[1-5]$", user_selection)
+    while True:
+        if len(validation_input) != 1:
+            print("{} is not a valid input".format(user_selection))
+            user_selection = input("Enter your selection: ")
+            validation_input = re.findall(r"^[1-5]$", user_selection)
+        else:
+            user_selection = int(user_selection)
+            return user_selection
+
+
 def main():
     print_menu()
     actors_list = []
-    user_selection = input("Enter your selection: ")
-    user_selection = int(user_selection)
+    user_selection = valid_input_user_selection()
     while user_selection != 5:
         if user_selection == 1:
             list_actors_by_age(actors_list)
@@ -86,10 +107,9 @@ def main():
         elif user_selection == 3:
             delete_actor(actors_list)
         elif user_selection == 4:
-            delete_movie()
+            delete_movie(actors_list)
         print_menu()
-        user_selection = input("Enter your selection: ")
-        user_selection = int(user_selection)
+        user_selection = valid_input_user_selection()
     print("OK, have a good one!")
 
 
