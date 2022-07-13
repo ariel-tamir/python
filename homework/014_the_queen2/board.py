@@ -3,15 +3,15 @@ import time
 
 
 class Board:
-    def __int__(self, queen_row, queen_col):
-        self.queen_row = queen_row
-        self.queen_col = queen_col
+    def __init__(self):
+        self.queen_row = 7
+        self.queen_col = 0
 
-    def board(self, x_row, x_col):
+    def board(self):
         for row in range(8):
             print(8 - row, " ", end="")
             for col in range(8):
-                if x_row == row and x_col == col:
+                if self.queen_row == row and self.queen_col == col:
                     print("♕ ", end="")
                 else:
                     print("🨇 ", end="")
@@ -77,9 +77,8 @@ class Board:
         self.board()
         print()
         print("The queen rests.")
-        return self.queen_col
 
-    def move_left(self):
+    def move_left(self, target_col):
         while self.queen_col > target_col:
             print()
             print("The queen is still moving…")
@@ -90,9 +89,8 @@ class Board:
         self.board()
         print()
         print("The queen rests.")
-        return self.queen_col
 
-    def move_up(self):
+    def move_up(self, target_row):
         while self.queen_row > target_row:
             print()
             print("The queen is still moving…")
@@ -103,7 +101,6 @@ class Board:
         self.board()
         print()
         print("The queen rests.")
-        return self.queen_row
 
     def move_down(self, target_row):
         while self.queen_row < target_row:
@@ -116,4 +113,4 @@ class Board:
         self.board()
         print()
         print("The queen rests.")
-        return self.queen_row
+
