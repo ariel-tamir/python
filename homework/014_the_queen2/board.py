@@ -3,9 +3,9 @@ import time
 
 
 class Board:
-    def __int__(self):
-        self.queen_row = 7
-        self.queen_col = 0
+    def __int__(self, queen_row, queen_col):
+        self.queen_row = queen_row
+        self.queen_col = queen_col
 
     def board(self, x_row, x_col):
         for row in range(8):
@@ -44,8 +44,8 @@ class Board:
     def target_number(self, queen_target):
         letter = queen_target[0]
         number = queen_target[1]
-        col = get_col(letter)
-        row = get_row(number)
+        col = self.get_col(letter)
+        row = self.get_row(number)
         return row, col
 
     def get_new_location_and_validity(self):
@@ -60,7 +60,7 @@ class Board:
             if len(validation_input) == 0:
                 print("{} is not a valid board location".format(queen_target))
                 continue
-            target_row, target_col = target_number(queen_target)
+            target_row, target_col = self.target_number(queen_target)
             if self.queen_row != target_row and self.queen_col != target_col:
                 print("{} is not a valid board location".format(queen_target))
                 continue
@@ -70,11 +70,11 @@ class Board:
         while self.queen_col < target_col:
             print()
             print("The queen is still moving…")
-            board()
+            self.board()
             time.sleep(1)
             print()
             self.queen_col = self.queen_col + 1
-        board()
+        self.board()
         print()
         print("The queen rests.")
         return self.queen_col
@@ -83,11 +83,11 @@ class Board:
         while self.queen_col > target_col:
             print()
             print("The queen is still moving…")
-            board()
+            self.board()
             time.sleep(1)
             print()
             self.queen_col = self.queen_col - 1
-        board()
+        self.board()
         print()
         print("The queen rests.")
         return self.queen_col
@@ -96,11 +96,11 @@ class Board:
         while self.queen_row > target_row:
             print()
             print("The queen is still moving…")
-            board()
+            self.board()
             time.sleep(1)
             print()
             self.queen_row = self.queen_row - 1
-        board()
+        self.board()
         print()
         print("The queen rests.")
         return self.queen_row
@@ -109,11 +109,11 @@ class Board:
         while self.queen_row < target_row:
             print()
             print("The queen is still moving…")
-            board()
+            self.board()
             time.sleep(1)
             print()
             self.queen_row = self.queen_row + 1
-        board()
+        self.board()
         print()
         print("The queen rests.")
         return self.queen_row
