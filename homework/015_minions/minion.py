@@ -1,10 +1,8 @@
 class Minion:
-    def __init__(self):
+    def __init__(self, line):
         self.name =
         self.eyes_amount =
         self.job =
-
-    def constructor(self):
 
     def is_eyes_amount(self, number):
 

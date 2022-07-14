@@ -1,6 +1,13 @@
 from minion import Minion
 
 
+def add_from_file():
+    file_name = input("Enter file name:")
+    with open(file_name, "r") as user_file:
+        for line in user_file:
+            minion = Minion(line)
+
+
 def print_menu():
     print()
     print("1. Add minions from file")
@@ -18,7 +25,7 @@ def main():
     user_selection = input("Enter your selection: ")
     while user_selection != 6:
         if user_selection == 1:
-            minion.constructor()
+
     print("Okay, bye bye")
 
 
