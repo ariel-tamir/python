@@ -19,6 +19,7 @@ def main():
     while user_selection != 6:
         if user_selection == 1:
             minion.constructor()
+    print("Okay, bye bye")
 
 
 main()
